@@ -4,21 +4,17 @@ import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
-import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
 
-const redis = Redis.fromEnv();
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
-	const views = (
-		await redis.mget<number[]>(
-			...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
-		)
-	).reduce((acc, v, i) => {
-		acc[allProjects[i].slug] = v ?? 0;
-		return acc;
-	}, {} as Record<string, number>);
+	const views = [
+		"unkey",
+		"planetfall",
+		"highstorm",
+		"twitch"
+	]
 
 	const featured = allProjects.find((project) => project.slug === "unkey")!;
 	const top2 = allProjects.find((project) => project.slug === "planetfall")!;
