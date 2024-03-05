@@ -5,16 +5,6 @@
 [build.environment]
   NODE_VERSION = "18" # Replace with your preferred Node.js version
 
-# You can add environment variables here if needed
-# [build.environment]
-#   REACT_APP_API_KEY = "your_api_key"
-
-# Redirects and Rewrites (optional, adjust as needed)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [[headers]]
   for = "/*"
   [headers.values]

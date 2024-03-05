@@ -8,9 +8,9 @@ import { Eye } from "lucide-react";
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
-	const featured = allProjects.find((project) => project.slug === "haul9000")!;
-	const top2 = allProjects.find((project) => project.slug === "trabendix")!;
-	const top3 = allProjects.find((project) => project.slug === "bookchain")!;
+	const featured = allProjects.find((project) => project.slug === "feehras")!;
+	const top2 = allProjects.find((project) => project.slug === "haul9000")!;
+	const top3 = allProjects.find((project) => project.slug === "trabendix")!;
 
 	return (
 		<div className="relative pb-16">
@@ -61,7 +61,7 @@ export default async function ProjectsPage() {
 								</p>
 								<div className="absolute bottom-4 md:bottom-8">
 									<p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-										Read more <span aria-hidden="true">&rarr;</span>
+										App <span aria-hidden="true">&rarr;</span>
 									</p>
 								</div>
 							</article>
