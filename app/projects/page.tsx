@@ -9,8 +9,8 @@ import { Eye } from "lucide-react";
 export const revalidate = 60;
 export default async function ProjectsPage() {
 	const featured = allProjects.find((project) => project.slug === "feehras")!;
-	const top2 = allProjects.find((project) => project.slug === "haul9000")!;
-	const top3 = allProjects.find((project) => project.slug === "trabendix")!;
+	const top2 = allProjects.find((project) => project.slug === "monkey-vs-gpt")!;
+	const top3 = allProjects.find((project) => project.slug === "roboqala")!;
 
 	return (
 		<div className="relative pb-16">
